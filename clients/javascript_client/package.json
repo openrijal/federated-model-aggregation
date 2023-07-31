@@ -16,7 +16,7 @@
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-promise": "^6.1.1",
     "husky": "^8.0.3",
-    "jest": "^28.1.0",
+    "jest": "^28.1.3",
     "lint-staged": "^13.2.3",
     "prettier": "3.0.0",
     "ts-jest": "^28.0.3",
@@ -34,8 +34,6 @@
     "compile": "rm -rfv dist/lib && tsc && tsc --build tsconfig.es5.json",
     "test": "jest --coverage",
     "lint": "eslint fma_connect --ext .ts --format table",
-    
-    // each dev run this once for setup of husky
     "prepare": "cd ../../ && husky install clients/javascript_client/.husky"
   }
 }

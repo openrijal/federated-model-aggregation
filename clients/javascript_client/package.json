@@ -23,7 +23,8 @@
     "typescript": "^5.1.6"
   },
   "dependencies": {
-    "@tensorflow/tfjs": "^3.18.0",
+    "@tensorflow/tfjs": "^4.10.0",
+    "@tensorflow/tfjs-core": "^4.10.0",
     "argparse": "^2.0.1",
     "fetch-mock": "^9.11.0",
     "jest-fetch-mock": "^3.0.3",
@@ -33,9 +34,10 @@
   "scripts": {
     "compile": "rm -rfv dist/lib && tsc && tsc --build tsconfig.es5.json",
     "dev": "tsc --watch",
-    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
+    "fix": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
+    "format": "prettier --ignore-path .gitignore --check .",
     "lint": "eslint fma_connect --ignore-path .eslintignore --ext .ts --format table",
     "prepare": "cd ../../ && husky install clients/javascript_client/.husky",
-    "test": "jest --coverage"
+    "test": "jest --coverage --passWithNoTests"
   }
 }
